@@ -1,3 +1,4 @@
+import 'package:e_learning_app/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -6,8 +7,9 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(20.0, 100.0, 20.0, 0.0),
+        padding: EdgeInsets.fromLTRB(30.0, 20.0, 30.0, 0.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -129,33 +131,43 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Container(
-                padding: EdgeInsets.all(17.5),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color(0xff000000),
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                child: Row(
-                  children: [
-                    Padding(padding: EdgeInsets.symmetric(horizontal: 32)),
-                    Text(
-                      "New Here ? ",
-                      style: TextStyle(
-                          fontFamily: 'Poppin',
-                          fontSize: 15.5,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xffe0c902)),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignupPage(),
                     ),
-                    Text(
-                      " Sign Up",
-                      style: TextStyle(
-                          fontFamily: 'Poppin',
-                          fontSize: 15.5,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xffffffff)),
-                    )
-                  ],
+                  );
+                },
+                child: Container(
+                  padding: EdgeInsets.all(17.5),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0xff000000),
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Row(
+                    children: [
+                      Padding(padding: EdgeInsets.symmetric(horizontal: 32)),
+                      Text(
+                        "New Here ? ",
+                        style: TextStyle(
+                            fontFamily: 'Poppin',
+                            fontSize: 15.5,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xffe0c902)),
+                      ),
+                      Text(
+                        " Sign Up",
+                        style: TextStyle(
+                            fontFamily: 'Poppin',
+                            fontSize: 15.5,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xffffffff)),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ],

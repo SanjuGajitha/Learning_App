@@ -1,3 +1,4 @@
+import 'package:e_learning_app/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -49,29 +50,39 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 40),
-              Container(
-                width: double.infinity,
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
-                    color: Color(0xff17202a),
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color.fromARGB(255, 29, 29, 29)
-                            .withOpacity(0.5), // Shadow color
-                        spreadRadius: 3, // Spread radius
-                        blurRadius: 5, // Blur radius
-                        offset: Offset(0, 3), // Offset in x,y
-                      ),
-                    ]),
-                child: Center(
-                  child: Text(
-                    "CONTINUE",
-                    style: TextStyle(
-                        color: Color(0xffe0c902),
-                        fontSize: 20,
-                        fontFamily: 'Poppin',
-                        fontWeight: FontWeight.bold),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginPage(),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 50,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      color: Color(0xff17202a),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color.fromARGB(255, 29, 29, 29)
+                              .withOpacity(0.5), // Shadow color
+                          spreadRadius: 3, // Spread radius
+                          blurRadius: 5, // Blur radius
+                          offset: Offset(0, 3), // Offset in x,y
+                        ),
+                      ]),
+                  child: Center(
+                    child: Text(
+                      "GET START",
+                      style: TextStyle(
+                          color: Color(0xffe0c902),
+                          fontSize: 20,
+                          fontFamily: 'Poppin',
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ),

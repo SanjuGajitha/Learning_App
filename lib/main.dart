@@ -1,3 +1,4 @@
+import 'package:e_learning_app/pages/home_page.dart';
 import 'package:e_learning_app/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }
