@@ -1,3 +1,5 @@
+import 'package:e_learning_app/pages/index_page.dart';
+import 'package:e_learning_app/pages/login_page.dart';
 import 'package:e_learning_app/pages/reusable/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 
@@ -71,52 +73,72 @@ class SignupPage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      color: Color(0xff000000),
-                      borderRadius: BorderRadius.circular(18),
-                      border: Border.all(color: Color(0xff000000))),
-                  child: Center(
-                    child: Text(
-                      "Get Set to Explore ->",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: 'Poppin',
-                          color: Color(0xffFAC310)),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => IndexPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Color(0xff000000),
+                        borderRadius: BorderRadius.circular(18),
+                        border: Border.all(color: Color(0xff000000))),
+                    child: Center(
+                      child: Text(
+                        "Get Set to Explore ->",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'Poppin',
+                            color: Color(0xffFAC310)),
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(height: 20),
-                Container(
-                    padding: EdgeInsets.symmetric(vertical: 14),
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: Color(0xffFAC310),
-                        borderRadius: BorderRadius.circular(18),
-                        border: Border.all(color: Color(0xff000000))),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Already a Member ?",
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: 'Poppin',
-                              color: Color(0xff000000)),
-                        ),
-                        Text(
-                          " Login Now",
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: 'PoppinBold',
-                              color: Color.fromARGB(255, 43, 43, 43)),
-                        )
-                      ],
-                    )),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                      padding: EdgeInsets.symmetric(vertical: 14),
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFAC310),
+                          borderRadius: BorderRadius.circular(18),
+                          border: Border.all(color: Color(0xff000000))),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Already a Member ?",
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: 'Poppin',
+                                color: Color(0xff000000)),
+                          ),
+                          Text(
+                            " Login Now",
+                            style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: 'PoppinBold',
+                                color: Color.fromARGB(255, 43, 43, 43)),
+                          )
+                        ],
+                      )),
+                ),
               ],
             ),
           ),
