@@ -1,3 +1,7 @@
+import 'package:e_learning_app/pages/primary_grades_page.dart';
+import 'package:e_learning_app/pages/primary_subjects.dart';
+import 'package:e_learning_app/pages/reusable/widgets/bottom_navigation.dart';
+import 'package:e_learning_app/pages/secondary_grades_page.dart';
 import 'package:flutter/material.dart';
 
 class IndexPage extends StatelessWidget {
@@ -6,6 +10,7 @@ class IndexPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Bottom(),
       backgroundColor: Color(0xffffffff),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 30, vertical: 55),
@@ -104,96 +109,116 @@ class IndexPage extends StatelessWidget {
                         fontFamily: 'Poppin',
                         fontWeight: FontWeight.w900)),
               ]),
-              SizedBox(height: 25),
+              SizedBox(height: 40),
               Column(
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                          width: 140,
-                          height: 160,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(50),
-                                topRight: Radius.circular(50)),
-                            color: Colors.teal,
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 3, vertical: 10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Image.asset(
-                                  'assests/primary.png',
-                                  width: 170,
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Center(
-                                  child: Text(
-                                    "Primary",
-                                    style: TextStyle(
-                                        fontFamily: 'Poppin',
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w800),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PrimaryGradesPage(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                            width: 140,
+                            height: 160,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(50),
+                                  topRight: Radius.circular(50)),
+                              color: Colors.teal,
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 3, vertical: 10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                    'assests/primary.png',
+                                    width: 170,
                                   ),
-                                ),
-                                Center(
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Center(
                                     child: Text(
-                                  "Grades 1-5",
-                                  style: TextStyle(
+                                      "Primary",
+                                      style: TextStyle(
+                                          fontFamily: 'Poppin',
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                  ),
+                                  Center(
+                                      child: Text(
+                                    "Grades 1-5",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: Color(0xffffffff),
+                                        fontFamily: 'PoppinBold'),
+                                  )),
+                                ],
+                              ),
+                            )),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SecondaryGradesPage(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                            width: 140,
+                            height: 160,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(50),
+                                  bottomRight: Radius.circular(45)),
+                              color: Colors.amber,
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 8, vertical: 10),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    'assests/secondary.png',
+                                    width: 170,
+                                  ),
+                                  SizedBox(
+                                    height: 13,
+                                  ),
+                                  Center(
+                                    child: Text(
+                                      "Secondary",
+                                      style: TextStyle(
+                                          fontFamily: 'Poppin',
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                  ),
+                                  Center(
+                                      child: Text(
+                                    "Grades 6-9",
+                                    style: TextStyle(
+                                      fontFamily: 'PoppinBold',
                                       fontSize: 16,
                                       color: Color(0xffffffff),
-                                      fontFamily: 'PoppinBold'),
-                                )),
-                              ],
-                            ),
-                          )),
-                      Container(
-                          width: 140,
-                          height: 160,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(50),
-                                bottomRight: Radius.circular(45)),
-                            color: Colors.amber,
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 8, vertical: 10),
-                            child: Column(
-                              children: [
-                                Image.asset(
-                                  'assests/secondary.png',
-                                  width: 170,
-                                ),
-                                SizedBox(
-                                  height: 13,
-                                ),
-                                Center(
-                                  child: Text(
-                                    "Secondary",
-                                    style: TextStyle(
-                                        fontFamily: 'Poppin',
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w800),
-                                  ),
-                                ),
-                                Center(
-                                    child: Text(
-                                  "Grades 6-9",
-                                  style: TextStyle(
-                                    fontFamily: 'PoppinBold',
-                                    fontSize: 16,
-                                    color: Color(0xffffffff),
-                                  ),
-                                )),
-                              ],
-                            ),
-                          ))
+                                    ),
+                                  )),
+                                ],
+                              ),
+                            )),
+                      )
                     ],
                   ),
                   SizedBox(height: 20),
@@ -285,7 +310,7 @@ class IndexPage extends StatelessWidget {
                             ))
                       ]),
                 ],
-              )
+              ),
             ],
           ),
         ),

@@ -67,7 +67,31 @@ flutter:
     - assests/secondary.png
     - assests/new2.png
     - assests/al.png
-
+    - assests/sinh.png
+    - assests/math.png
+    - assests/buddh.png
+    - assests/english.png
+    - assests/envi.png
+    - assests/one.jpg
+    - assests/two.jpg
+    - assests/three.jpg
+    - assests/four.jpg
+    - assests/five.jpg
+    - assests/six.png
+    - assests/seven.png
+    - assests/eight.png
+    - assests/nine.png
+    - assests/sscience.png
+    - assests/smaths.png
+    - assests/ssinhala.png
+    - assests/sbuddh.png
+    - assests/stamil.png
+    - assests/senglish.png
+    - assests/shisto.png
+    - assests/sgeo.png
+    - assests/sheal.png
+    - assests/scivic.png
+    - assests/ict.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
