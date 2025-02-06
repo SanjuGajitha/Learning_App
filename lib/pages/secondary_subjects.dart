@@ -91,7 +91,7 @@ class SecondarySubjects extends StatelessWidget {
                           cardColor: Color(0xff07648D)),
                       SizedBox(height: 20),
                       SecondarySubjectCard(
-                          subject: "MUsic",
+                          subject: "Music",
                           subjectImage: AssetImage('assests/music.png'),
                           cardColor: Color(0xffDBCA7F)),
                     ],

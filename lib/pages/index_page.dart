@@ -1,3 +1,4 @@
+import 'package:e_learning_app/pages/olevel_grade.dart';
 import 'package:e_learning_app/pages/primary_grades_page.dart';
 import 'package:e_learning_app/pages/primary_subjects.dart';
 import 'package:e_learning_app/pages/reusable/widgets/bottom_navigation.dart';
@@ -225,45 +226,55 @@ class IndexPage extends StatelessWidget {
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          width: 140,
-                          height: 160,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(50),
-                                  bottomRight: Radius.circular(45)),
-                              color: Color(0xffEC7B82)),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 6),
-                            child: Column(
-                              children: [
-                                Image.asset(
-                                  'assests/new2.png',
-                                  width: 110,
-                                ),
-                                SizedBox(
-                                  height: 2,
-                                ),
-                                Center(
-                                  child: Text(
-                                    "O/L Exams",
-                                    style: TextStyle(
-                                        fontFamily: 'Poppin',
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w800),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => OlevelGrade(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: 140,
+                            height: 160,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(50),
+                                    bottomRight: Radius.circular(45)),
+                                color: Color(0xffEC7B82)),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 6),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    'assests/new2.png',
+                                    width: 110,
                                   ),
-                                ),
-                                Center(
+                                  SizedBox(
+                                    height: 2,
+                                  ),
+                                  Center(
                                     child: Text(
-                                  "Ordinary Level",
-                                  style: TextStyle(
-                                    fontFamily: 'PoppinBold',
-                                    fontSize: 15,
-                                    color: Color(0xffffffff),
+                                      "O/L Exams",
+                                      style: TextStyle(
+                                          fontFamily: 'Poppin',
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w800),
+                                    ),
                                   ),
-                                )),
-                              ],
+                                  Center(
+                                      child: Text(
+                                    "Ordinary Level",
+                                    style: TextStyle(
+                                      fontFamily: 'PoppinBold',
+                                      fontSize: 15,
+                                      color: Color(0xffffffff),
+                                    ),
+                                  )),
+                                ],
+                              ),
                             ),
                           ),
                         ),
