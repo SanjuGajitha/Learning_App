@@ -1,4 +1,5 @@
 import 'package:e_learning_app/pages/signup_page.dart';
+import 'package:e_learning_app/pages/teacher_registration.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -102,31 +103,44 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    color: Color(0xff000000),
-                    borderRadius: BorderRadius.circular(18)),
-                padding: EdgeInsets.all(14),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 28),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        "Sign in with Google",
-                        style: TextStyle(
-                            fontFamily: 'Poppin',
-                            fontSize: 15.5,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xffe0c902)),
-                      ),
-                      Image.asset(
-                        'assests/google.png',
-                        width: 30,
-                        height: 30,
-                      )
-                    ],
+
+              //for temoary i use this for check my teacher_registraion_page
+
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TeacherRegistration(),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Color(0xff000000),
+                      borderRadius: BorderRadius.circular(18)),
+                  padding: EdgeInsets.all(14),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 28),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "Sign in with Google",
+                          style: TextStyle(
+                              fontFamily: 'Poppin',
+                              fontSize: 15.5,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xffe0c902)),
+                        ),
+                        Image.asset(
+                          'assests/google.png',
+                          width: 30,
+                          height: 30,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
